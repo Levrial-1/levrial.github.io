@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Keinan Rizky Ramadhan — Mahasiswa Informatika, Web Developer, dan Tech Enthusiast. Lihat karya dan proyek terbaru saya.">
+    <meta name="keywords" content="Keinan Rizky Ramadhan, Portfolio, Informatika, Web Developer, Mahasiswa">
+    <meta name="author" content="Keinan Rizky Ramadhan">
+    <title>Keinan Rizky Ramadhan — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>KRR<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Beranda</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">Tentang</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Keahlian</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Proyek</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Tersedia untuk kolaborasi</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Halo, Saya</span>
+                <span class="title-name" id="typedName"></span>
+                <span class="cursor-blink">|</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="subtitle-role">Mahasiswa Informatika</span>
+                <span class="subtitle-divider">•</span>
+                <span class="subtitle-role">Web Developer</span>
+                <span class="subtitle-divider">•</span>
+                <span class="subtitle-role">Tech Enthusiast</span>
+            </p>
+            <p class="hero-description">
+                Membangun pengalaman digital yang bermakna melalui kode yang elegan dan desain yang intuitif.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>Lihat Karya Saya</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Hubungi Saya</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Proyek</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Teknologi</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Tahun Coding</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-avatar-wrapper">
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring ring-2"></div>
+                <div class="avatar-ring ring-3"></div>
+                <div class="hero-avatar">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-card card-1">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="floating-card card-2">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+            <div class="floating-card card-3">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll ke bawah</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;tentang&gt;</span>
+                <h2 class="section-title">Mengenal Saya</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <div class="code-window">
+                                <div class="window-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="window-title">about_me.js</span>
+                                </div>
+                                <div class="window-body">
+                                    <pre><code><span class="code-keyword">const</span> <span class="code-variable">keinan</span> = {
+  <span class="code-property">nama</span>: <span class="code-string">"Keinan Rizky R."</span>,
+  <span class="code-property">jurusan</span>: <span class="code-string">"Informatika"</span>,
+  <span class="code-property">passion</span>: <span class="code-string">"Web Dev"</span>,
+  <span class="code-property">hobby</span>: [
+    <span class="code-string">"Coding"</span>,
+    <span class="code-string">"Problem Solving"</span>,
+    <span class="code-string">"Learning Tech"</span>
+  ],
+  <span class="code-property">motto</span>: <span class="code-string">"Code with purpose"</span>
+};</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <h3 class="about-heading">Passionate Developer & Lifelong Learner</h3>
+                    <p class="about-text">
+                        Saya <strong>Keinan Rizky Ramadhan</strong>, seorang mahasiswa Informatika yang memiliki
+                        passion mendalam di dunia teknologi dan pengembangan perangkat lunak. Saya percaya bahwa
+                        teknologi dapat menjadi jembatan untuk menciptakan solusi yang berdampak positif bagi masyarakat.
+                    </p>
+                    <p class="about-text">
+                        Perjalanan saya di dunia coding dimulai dari rasa penasaran yang sederhana, dan kini
+                        berkembang menjadi semangat untuk terus belajar dan berkarya. Saya selalu antusias
+                        mengeksplorasi teknologi baru dan mengerjakan proyek-proyek yang menantang.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span class="detail-label">Pendidikan</span>
+                                <span class="detail-value">S1 Informatika</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="detail-label">Lokasi</span>
+                                <span class="detail-value">Indonesia</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <span class="detail-label">Minat</span>
+                                <span class="detail-value">Web Development, AI/ML</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span class="detail-label">Bahasa</span>
+                                <span class="detail-value">Indonesia, English</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Mari Terhubung</span>
+                        <i class="fas fa-handshake"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;keahlian&gt;</span>
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category reveal-up">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="70">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up" style="--delay: 0.2s">
+                    <div class="category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="70">
+                            <div class="skill-icon"><i class="fab fa-php"></i></div>
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="65">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="70">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up" style="--delay: 0.4s">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="category-title">Tools & Lainnya</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="70">
+                            <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="65">
+                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="60">
+                            <div class="skill-icon"><i class="fab fa-linux"></i></div>
+                            <span class="skill-name">Linux</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;proyek&gt;</span>
+                <h2 class="section-title">Karya Terbaru</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="web">Web App</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal-up" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder gradient-1">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Lihat Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-desc">Platform belanja online full-stack dengan fitur keranjang, pembayaran, dan dashboard admin yang responsif.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal-up" data-category="web" style="--delay: 0.15s">
+                    <div class="project-image">
+                        <div class="project-placeholder gradient-2">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Lihat Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-desc">Aplikasi manajemen tugas kolaboratif dengan fitur drag-and-drop, notifikasi real-time, dan analitik produktivitas.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal-up" data-category="mobile" style="--delay: 0.3s">
+                    <div class="project-image">
+                        <div class="project-placeholder gradient-3">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Lihat Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Health Tracker Mobile</h3>
+                        <p class="project-desc">Aplikasi mobile untuk tracking kesehatan harian dengan visualisasi data menggunakan grafik interaktif.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal-up" data-category="design" style="--delay: 0.45s">
+                    <div class="project-image">
+                        <div class="project-placeholder gradient-4">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Lihat Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AI Chat Interface</h3>
+                        <p class="project-desc">Desain UI/UX untuk antarmuka chatbot AI dengan tema futuristik dan animasi yang halus.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Prototype</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;kontak&gt;</span>
+                <h2 class="section-title">Mari Terhubung</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h3 class="contact-heading">Punya ide menarik?<br>Mari kita wujudkan bersama!</h3>
+                    <p class="contact-text">
+                        Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar bertukar pikiran tentang teknologi.
+                        Jangan ragu untuk menghubungi saya!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:keinan@email.com" class="contact-method">
+                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="method-label">Email</span>
+                                <span class="method-value">keinan@email.com</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-method">
+                            <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="method-label">Lokasi</span>
+                                <span class="method-value">Indonesia</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Nama Lengkap</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Subjek</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Pesan</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Kirim Pesan</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-bracket">&lt;</span>KRR<span class="logo-bracket">/&gt;</span>
+                    <p>Crafting digital experiences with passion.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Beranda</a>
+                    <a href="#about">Tentang</a>
+                    <a href="#skills">Keahlian</a>
+                    <a href="#projects">Proyek</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Keinan Rizky Ramadhan. Dibuat dengan <i class="fas fa-heart" style="color: var(--accent-primary);"></i> dan banyak kopi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
